@@ -1,0 +1,25 @@
+{
+  "name": "sustainable-product-exchange",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "db:setup": "node --env-file=.env scripts/setup-db.mjs",
+    "db:mongo": "node --env-file=.env scripts/setup-mongo.mjs",
+    "test:sql": "node scripts/test-sql.mjs"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "jose": "^5.9.6",
+    "mongodb": "^6.10.0",
+    "next": "^15.1.0",
+    "pg": "^8.13.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "^0.2.15"
+  }
+}

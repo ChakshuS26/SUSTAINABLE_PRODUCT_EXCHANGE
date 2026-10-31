@@ -1,0 +1,47 @@
+:root {
+  --green: #2f7d4f; --bg: #f6f8f5; --card: #fff; --ink: #1d2b22; --muted: #66756b;
+  --line: #dfe6df; --danger: #b3261e; --radius: 12px;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font: 16px/1.5 system-ui, -apple-system, 'Segoe UI', sans-serif; background: var(--bg); color: var(--ink); }
+a { color: var(--green); text-decoration: none; } a:hover { text-decoration: underline; }
+.container { max-width: 1040px; margin: 0 auto; padding: 24px 16px 64px; }
+nav.top { background: #fff; border-bottom: 1px solid var(--line); }
+nav.top .in { max-width: 1040px; margin: 0 auto; padding: 12px 16px; display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+nav.top .brand { font-weight: 700; font-size: 18px; margin-right: auto; }
+nav.top .who { color: var(--muted); font-size: 14px; }
+h1 { font-size: 26px; margin: 0 0 4px; } h2 { font-size: 19px; margin: 28px 0 10px; }
+.sub { color: var(--muted); margin: 0 0 20px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px; }
+.card h3 { margin: 6px 0 2px; font-size: 17px; }
+.meta { color: var(--muted); font-size: 14px; }
+.price { font-weight: 700; font-size: 18px; }
+.badge { display: inline-block; padding: 2px 10px; border-radius: 99px; font-size: 12px; font-weight: 600; background: #e8f1ea; color: var(--green); }
+.badge.sell { background: #e7eefb; color: #2a5db0; } .badge.donate { background: #fdeaf0; color: #b3366a; }
+.badge.exchange { background: #e8f1ea; color: var(--green); }
+.badge.pending { background: #fff3da; color: #8a6200; } .badge.accepted { background: #e2f3e8; color: #1d6b3c; }
+.badge.rejected, .badge.cancelled { background: #f6e3e1; color: var(--danger); } .badge.completed { background: #e6e9ee; color: #44505e; }
+form.filters { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px; }
+input, select, textarea { font: inherit; padding: 9px 11px; border: 1px solid var(--line); border-radius: 8px; background: #fff; width: 100%; }
+form.filters input, form.filters select { width: auto; flex: 1 1 160px; }
+label { display: block; font-size: 14px; font-weight: 600; margin: 12px 0 4px; }
+button, .btn { font: inherit; font-weight: 600; padding: 9px 16px; border: 0; border-radius: 8px; background: var(--green); color: #fff; cursor: pointer; display: inline-block; }
+button:hover, .btn:hover { opacity: .9; text-decoration: none; }
+button.ghost, .btn.ghost { background: #fff; color: var(--green); border: 1px solid var(--green); }
+button.danger { background: var(--danger); } button.small { padding: 5px 10px; font-size: 13px; }
+button:disabled { opacity: .5; cursor: wait; }
+.form { max-width: 480px; margin: 0 auto; } .form.wide { max-width: 620px; }
+.error { background: #fbe9e7; color: var(--danger); padding: 9px 12px; border-radius: 8px; margin-top: 12px; font-size: 14px; }
+.okmsg { background: #e6f4ea; color: #1d6b3c; padding: 9px 12px; border-radius: 8px; margin-top: 12px; font-size: 14px; }
+table { width: 100%; border-collapse: collapse; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; font-size: 14px; }
+th, td { text-align: left; padding: 9px 12px; border-bottom: 1px solid var(--line); vertical-align: top; } th { background: #f0f4ef; }
+.row { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.chip { display: inline-flex; gap: 6px; align-items: center; background: #eef3ee; border-radius: 99px; padding: 3px 10px; font-size: 13px; margin: 0 6px 6px 0; }
+.chip button { background: none; color: var(--danger); padding: 0; font-size: 14px; }
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; }
+.stat b { display: block; font-size: 26px; }
+.note { border-left: 3px solid var(--green); padding: 4px 10px; margin: 8px 0; background: #fafcfa; }
+.empty { color: var(--muted); padding: 20px; text-align: center; background: #fff; border: 1px dashed var(--line); border-radius: var(--radius); }
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; } @media (max-width: 720px) { .two { grid-template-columns: 1fr; } }
+dl.attrs { display: grid; grid-template-columns: auto 1fr; gap: 4px 16px; margin: 0; } dl.attrs dt { color: var(--muted); } dl.attrs dd { margin: 0; }
