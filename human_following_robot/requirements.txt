@@ -1,3 +1,0 @@
-numpy<2
-opencv-python
-RPi.GPIO; platform_machine == "aarch64" or platform_machine == "armv7l"
